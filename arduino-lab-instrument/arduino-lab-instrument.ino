@@ -1,4 +1,3 @@
-#include <math.h>
 #include "timing.h"
 #include "wave_gen.h"
 #include "error.h"
