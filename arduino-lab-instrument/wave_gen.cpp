@@ -32,7 +32,7 @@ void computeValuesPWM (int ch) {
 	int val;
 
 	// set the number of points that represents a period of the wave
-	wave[ch].data.maxIndex = 1000000 / wave[ch].frequency;
+	wave[ch].data.maxIndex = MAX_SAMPLING_FREQUENCY / wave[ch].frequency;
 
 	if (wave[ch].data.maxIndex > MAX_VALUESPERIOD) 
 		wave[ch].data.maxIndex = MAX_VALUESPERIOD;
@@ -48,10 +48,15 @@ void computeValuesPWM (int ch) {
 			else
 				val = 0;
 		}
+		/*
 		else if (wave[ch].type == TYPE_TRIANGLE) {
 			
 		}
-
+		*/
 		wave[ch].data.values[i] = val;
   }
+}
+
+void writePWM () {
+	
 }

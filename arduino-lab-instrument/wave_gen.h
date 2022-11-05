@@ -6,7 +6,8 @@
 
 #define MAX_WAVES 6
 #define MAX_FREQ 10000
-#define MAX_VALUESPERIOD 1000
+#define MAX_SAMPLING_FREQUENCY 100000
+#define MAX_VALUESPERIOD 100
 #define TYPE_SINE 1
 #define TYPE_SQUARE 2
 #define TYPE_TRIANGLE 3
@@ -38,6 +39,9 @@ void writePWM ();
  */
 int addNewWave (float frequency, int type, int dutyCycle, int channel);
 
+/*  fills the pwm data of a wave with correspondant values
+ * 	values depend only by the parameters of the wave 
+ */
 void computeValuesPWM (int channel);
 
 #endif
